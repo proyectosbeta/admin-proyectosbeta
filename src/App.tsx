@@ -1,34 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { Admin, Resource } from "react-admin";
+import jsonServerProvider from "ra-data-json-server";
+import { MyLayout } from "./components/MyLayout";
+import { UserList } from "./users/users";
+import { HeroesList } from "./systems/heroesIII/HeroesList";
+
+const URL = "http://localhost:4500/creatures";
+const dataProvider = jsonServerProvider(URL);
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <Admin layout={MyLayout} dataProvider={dataProvider}>
+      {/* <Resource name="users" list={UserList} /> */}
+      <Resource name="castle" list={HeroesList} />
+      <Resource name="conflux" list={HeroesList} />
+      <Resource name="cove" list={HeroesList} />
+      <Resource name="dungeon" list={HeroesList} />
+      <Resource name="fortress" list={HeroesList} />
+      <Resource name="inferno" list={HeroesList} />
+      <Resource name="necropolis" list={HeroesList} />
+      <Resource name="rampart" list={HeroesList} />
+      <Resource name="stronghold" list={HeroesList} />
+      <Resource name="tower" list={HeroesList} />
+    </Admin>
+  );
 }
 
-export default App
+export default App;
