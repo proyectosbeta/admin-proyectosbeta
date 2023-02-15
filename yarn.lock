@@ -1600,14 +1600,6 @@ ra-core@^4.8.0:
     react-is "^17.0.2"
     react-query "^3.32.1"
 
-ra-data-json-server@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-4.8.0.tgz#1643cf39a237af912c7119c1becc4292195cd22c"
-  integrity sha512-m119VemnZ4SxaohEvfIpEXG6PR0FaSndTQBLL88+ey120VWWECasJIwdBdLazmqe+7EAna/yFwjJnGun+CdYjQ==
-  dependencies:
-    query-string "^7.1.1"
-    ra-core "^4.8.0"
-
 ra-i18n-polyglot@^4.8.0:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-4.8.0.tgz#f50358924c2c1905da83947d7614d0aa8f2345b6"

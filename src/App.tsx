@@ -1,11 +1,10 @@
 import { Admin, Resource } from "react-admin";
-import jsonServerProvider from "ra-data-json-server";
 import { MyLayout } from "./components/MyLayout";
-import { UserList } from "./users/users";
+import Rest from "./providers/Rest";
 import { HeroesList } from "./systems/heroesIII/HeroesList";
+import { UserList } from "./users/users";
 
-const URL = "http://localhost:4500/creatures";
-const dataProvider = jsonServerProvider(URL);
+const dataProvider = Rest(`${import.meta.env.VITE_DOMAIN_HEROES_III_HOTA}/creatures`);
 
 function App() {
   return (

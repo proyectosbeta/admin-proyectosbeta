@@ -5,3 +5,5 @@
 * [feat] Add react proyect with react admin.
 * [docs] Update readme file.
 * [feat] Add Heroes III HOTA (system)
+* [refactor] Data provider.
+* [feat] Add dotenv. 
